@@ -53,23 +53,25 @@
         <div class="container mt-5">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
-                    <h1>Feltöltés a galériába:</h1>
-                    <?php
-                        if (!empty($uzenet))
-                        {
-                            echo '<ul>';
-                            foreach($uzenet as $u)
-                                echo "<li>$u</li>";
-                            echo '</ul>';
-                        }
-                    ?>
-                        <form action="?oldal=galeria" method="post"
-                                    enctype="multipart/form-data">
-                            <label>Kép:</label>
-                            <input type="file" name="elso" required>
-                            <br>     
-                            <input type="submit" name="kuld">
-                        </form>
+                    <?php if(isset($_SESSION['login'])) { ?>
+                        <h1>Feltöltés a galériába:</h1>
+                        <?php
+                            if (!empty($uzenet))
+                            {
+                                echo '<ul>';
+                                foreach($uzenet as $u)
+                                    echo "<li>$u</li>";
+                                echo '</ul>';
+                            }
+                        ?>
+                            <form action="?oldal=galeria" method="post"
+                                        enctype="multipart/form-data">
+                                <label>Kép:</label>
+                                <input type="file" name="elso" required>
+                                <br>     
+                                <input type="submit" name="kuld">
+                            </form>
+                    <?php }?>
                 </div>
             </div>
         </div>
