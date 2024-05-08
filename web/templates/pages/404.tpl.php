@@ -1,1 +1,1 @@
-<h2><?= $keres['szoveg'] ?></h2>
+<h2 style="color: black;"><?= $keres['szoveg'] ?></h2>

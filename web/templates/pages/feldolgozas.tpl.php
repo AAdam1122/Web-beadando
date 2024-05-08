@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Kapcsolat ürlap</title>
         <meta charset="utf-8">
     </head>
-    <body>
+    <body style="color: black;">
         <?php if(isset($uzenet)) { ?>
             <h1><?= $uzenet ?></h1>
             <?php if($ujra) { ?>

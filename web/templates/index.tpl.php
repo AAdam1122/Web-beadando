@@ -7,24 +7,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?= $ablakcim['cim'] . ( (isset($ablakcim['mottó'])) ? ('|' . $ablakcim['mottó']) : '' ) ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 	<style>
-	.header {
-      background-image: url("images/asda.webp");
-      background-size: cover;
-      background-position: center;
-      color: #ffff;
-    }
+	.bg{
+		background-image: url("images/bg.webp");
+		background-size: cover;
+		background-position: center top;
+		color: #ffffff;
+	}
 	</style>
 </head>
-<body>
-	<header class="header">
+<body class= "bg">
+	<header class="header text-dark">
 		<h1 class="jumbotron text-center" style="margin-bottom:0"><?= $fejlec['cim'] ?></h1>
 		<?php if (isset($fejlec['motto'])) { ?><h2 class="jumbotron text-center" style="margin-bottom:0"><?= $fejlec['motto'] ?></h2><?php } ?>
 		<?php if(isset($_SESSION['login'])) { ?>Bejelentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?>
 	</header>
 
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
   		<div class="container-fluid">
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -49,7 +50,7 @@
 		<?php include("./templates/pages/{$keres['fajl']}.tpl.php"); ?>
 	</div>
 
-    <footer>
+    <footer style="color: black;">
         <?php if(isset($lablec['copyright'])) { ?>&copy;&nbsp;<?= $lablec['copyright'] ?> <?php } ?>
 		&nbsp;
         <?php if(isset($lablec['ceg'])) { ?><?= $lablec['ceg']; ?><?php } ?>

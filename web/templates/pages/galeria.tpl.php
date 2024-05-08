@@ -48,7 +48,7 @@
         label { display: block; }
     </style>
 </head>
-<body>
+<body style="color: black;">
     <br>
         <div class="container mt-5">
             <div class="row justify-content-center">

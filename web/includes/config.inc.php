@@ -1,16 +1,16 @@
 <?php
 $ablakcim = array(
-    'cim' => 'Kicsi weboldal',
+    'cim' => 'Receptek mindenkinek',
 );
 
 $fejlec = array(
-	'cim' => 'Kicsi weboldal',
+	'cim' => 'Receptek mindenkinek',
 	'motto' => 'Üdvözöljük!'
 );
 
 $lablec = array(
     'copyright' => 'Copyright '.date("Y").'.',
-    'ceg' => 'Kicsi weboldal Kft.'
+    'ceg' => 'Receptek mindenkinek Kft.'
 );
 
 $oldalak = array(
@@ -34,5 +34,5 @@ $hiba_oldal = array ('fajl' => '404', 'szoveg' => 'A keresett oldal nem találha
     $TIPUSOK = array ('.jpg', '.png');
     $MEDIATIPUSOK = array('image/jpeg', 'image/png');
     $DATUMFORMA = "Y.m.d. H:i";
-    $MAXMERET = 500*1024;
+    $MAXMERET = 1000*1000;
 ?>

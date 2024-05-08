@@ -25,13 +25,16 @@ if(isset($_SESSION['login'])) {
             height: 150px;
             resize: none;
         }
+        .text{
+          font-weight: bold;
+        }
     </style>
   </head>
-  <body>
+  <body style="color: black;" class="text">
     <div class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-md-6 text-center">
-          <h1>Kapcsolat ürlap</h1>
+          <h1><strong>Kapcsolat ürlap</strong></h1>
           <form action="?oldal=feldolgozas" method="post">
               <label for="name">Név:</label>
               <input type="text" id="name" name="name" value="<?php echo $defaultName; ?>" readonly required><br>
