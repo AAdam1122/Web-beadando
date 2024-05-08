@@ -8,17 +8,6 @@ if(isset($_SESSION['login'])) {
 
 <!DOCTYPE html>
   <head>
-    <script>
-        function validateEmail() {
-            var email = document.getElementById("email").value;
-            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                alert("Adj meg egy létező e-mailt.");
-                return false;
-            }
-            return true;
-        }
-    </script>
     <style>
         #message {
             width: 100%;
