@@ -50,7 +50,7 @@
 		<?php include("./templates/pages/{$keres['fajl']}.tpl.php"); ?>
 	</div>
 
-    <footer style="color: black;">
+    <footer class="fixed-bottom" style="color: black;">
         <?php if(isset($lablec['copyright'])) { ?>&copy;&nbsp;<?= $lablec['copyright'] ?> <?php } ?>
 		&nbsp;
         <?php if(isset($lablec['ceg'])) { ?><?= $lablec['ceg']; ?><?php } ?>

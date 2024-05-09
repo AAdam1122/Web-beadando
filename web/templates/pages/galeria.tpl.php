@@ -40,19 +40,25 @@
 <html>
 <head>
     <style type="text/css">
-        div#galeria {margin: 0 auto; width: 620px;}
-        div.kep { display: inline-block; }
-        div.kep img { width: 200px; }
-    </style>
-    <style type="text/css">
         label { display: block; }
     </style>
+    <style>
+        .img-fluid{
+            max-width: 75%; 
+            height: auto;
+        }
+        p{
+            border-radius:5px;
+            width: 250px
+        }
+    </style>
+
 </head>
 <body style="color: black;">
     <br>
-        <div class="container mt-5">
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
+                <div class="col-6 text-center">
                     <?php if(isset($_SESSION['login'])) { ?>
                         <h1>Feltöltés a galériába:</h1>
                         <?php
@@ -76,22 +82,25 @@
             </div>
         </div>
     <br>
-    <div id="galeria">
-        <?php
-        arsort($kepek);
-        foreach($kepek as $fajl => $datum)
-        {
-        ?>
-            <div class="kep">
-                <a href="<?php echo $MAPPA.$fajl ?>">
-                    <img src="<?php echo $MAPPA.$fajl ?>">
-                </a>            
-                <p>Név:  <?php echo $fajl; ?></p>
-                <p>Dátum:  <?php echo date($DATUMFORMA, $datum); ?></p>
-            </div>
-        <?php
-        }
-        ?>
+    <div class="container">
+        <div class="row justify-content-center">
+            <?php
+            arsort($kepek);
+            foreach($kepek as $fajl => $datum)
+            {
+            ?>
+                <div class="col-lg-4 col-md-6 col-12 text-center">
+                    <a href="<?php echo $MAPPA.$fajl ?>">
+                        <img src="<?php echo $MAPPA.$fajl ?>" class="img-fluid" alt="Responsive image">
+                    </a>            
+                    <p class="bg-success" style="display: inline-block"><strong>Név:  <?php echo $fajl; ?></strong></p>
+                    <br>
+                    <p class="bg-success" style="display: inline-block"><strong>Dátum:  <?php echo date($DATUMFORMA, $datum); ?></strong></p>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
     </div>
 </body>
 </html>
